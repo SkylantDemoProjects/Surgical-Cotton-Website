@@ -1,0 +1,615 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #138a9c;
+    border-bottom: 2px solid#138a9c;
+    font-family: Arial, sans-serif;
+}
+
+/* Left: Logo + Brand Name */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #505254;
+}
+
+.nav-left .brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Right: Menu Links */
+.nav-right a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    font-weight: bold; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hover effect */
+.nav-right a:hover {
+    color: #292927;         /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* optional subtle bg */
+}
+
+/* Active/Clicked effect */
+.nav-right a:active {
+    color: #5f5d56;         /* Change color when link is clicked */
+    background-color: rgba(255, 255, 255, 0.2); /* subtle bg */
+}
+
+
+/* Make dropdown inline with other links */
+.dropdown {
+    position: relative;
+    display: inline-block;  /* important: align horizontally */
+}
+
+/* Dropdown button (Products link) */
+.dropbtn {
+    text-decoration: none;
+    color: #138a9c;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 20px;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.dropbtn:hover {
+    color: #151514;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;               
+    position: absolute;
+    top: 100%;                   
+    left: 0;
+    background-color: #138a9c !important;   /* Dropdown background */
+    list-style: none; 
+    padding: 0;                /* no extra padding */
+    margin: 0;                /* Reduce vertical padding */
+    border-radius: 5px;
+    width: auto;            /* width auto -> content ke according */
+    min-width: 120px;           /* Smaller width */
+    z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Remove spacing from <li> */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Dropdown links styling */
+.dropdown-menu li a {
+    display: block;
+    white-space: nowrap; 
+    padding: 2px 8px;
+    line-height: 1;  
+    font-size: 15px;
+    color: rgb(221, 230, 231);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: block;         /* ensures each link is on its own line */
+    margin: 0; 
+    background-color: transparent; /* <-- make sure link background is transparent */
+  
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+.highlight-scroll {
+  background-color: #f0fafb;
+  color: #0d6d7a;
+  font-size: 19px;
+  font-weight: 500;
+  padding: 12px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Product Section */
+.product-section {
+    padding: 60px 8%;
+    background-color: #f9f9f9;
+}
+
+.product-description h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #138a9c;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+
+.product-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Image section */
+.product-image {
+    flex: 1;
+    text-align: center;
+}
+.product-image img {
+    width: 80%;
+    max-width: 450px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.range-container {
+    margin-top: 20px;
+}
+.range-container p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+.btn {
+    background-color: #0c87a2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: #02ccf4;
+}
+
+/* Details section */
+.product-details {
+    flex: 1;
+}
+.product-details h3 {
+    color: #138a9c;
+    margin-top: 20px;
+}
+.product-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.product-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #161515;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .product-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product-details {
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------
+    Footer
+---------------------------*/
+footer {
+    background-color: #141617;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+    color: #fff;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a:hover {
+    color: #ffdd57;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/* --------------------------
+    Footer
+---------------------------*/
+footer {
+    background-color: #141617;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+    color: #fff;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a:hover {
+    color: #ffdd57;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+}
+
+.footer-section.social a {
+    color: white;             /* icon color */
+    font-size: 20px;          /* icon size */
+    margin-right: 15px;       /* spacing between icons */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #ffdd57;           /* hover color */
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🔹 Popup background */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* 🔹 Popup box */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* 🔹 Close button */
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: #555;
+}
+.close:hover {
+  color: red;
+}
+
+/* 🔹 Form inputs */
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 16px;
+}
+
+.modal-content button {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.modal-content select {
+    appearance: none;        /* Arrow remove */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;  /* input jaisa bg */
+}
+
+.modal-content button:hover {
+  background-color: darkcyan;
+}
+
+/* 🔹 Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Simple Popup Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .submit-btn {
+      background: teal;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover { background: #006666; }
+
+
+
+
+
+
+
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 16px;
+  color: #363434; /* <-- Yahi font color hai */
+}
+
+
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;  /* same as input */
+  font-size: 16px;
+}

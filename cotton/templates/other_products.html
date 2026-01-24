@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     {% load static %}
+    
+    {% comment %} <link rel="stylesheet" href="{% static 'css/products.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/other.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+      <header>
+       
+     <nav class="navbar">
+    <!-- Left: Logo + Brand Name -->
+    <div class="nav-left">
+        <img src="{% static 'img/logo2.png' %}" alt="Tirupati Logo" class="logo">
+        <span class="brand-name">Tirupati Cotton Suppliers</span>
+    </div>
+
+    <!-- Right: Menu Links -->
+    <div class="nav-right">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+
+        <!-- Products Dropdown -->
+        <div class="dropdown">
+            <a href="#">Products</a>
+
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a href="{% url 'Absorbent_Cotton' %}">Absorbent Cotton</a></li>
+                <li><a href="{% url 'Absorbent_Gauze_Bandage' %}">Absorbent Gauze Bandage</a></li>
+                <li><a href="{% url 'Syringe_and_Needles' %}">Syringe and Needles</a></li>
+                <li><a href="{% url 'Hand_Gloves' %}">Hand Gloves</a></li>
+                <li><a href="{% url 'Blood_Collection_Tubes' %}">Blood Collection Tubes</a></li>
+                <li><a href="{% url 'zig_zag_cotton' %}">Zig Zag Cotton</a></li>
+                <li><a href="{% url 'Gauze_Cloth_Than' %}">Gauze Cloth Than</a></li>
+                <li><a href="{% url 'Other_Products' %}">Other Products</a></li>
+            </ul>
+        </div>
+
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+</nav>
+</header>
+        
+<section class="other-products">
+    <h2>Other Products</h2>
+    <div class="products-grid">
+
+        <!-- Surgical Mask -->
+        <div class="product-card">
+            <img src="{% static 'img/mask.webp' %}" alt="Surgical Mask">
+            <h3>Surgical Mask</h3>
+            <p>(100 pcs)</p>
+        </div>
+
+        <!-- Buffon Cap -->
+        <div class="product-card">
+            <img src="{% static 'img/cap.webp' %}" alt="Buffon Cap">
+            <h3>Buffon Cap</h3>
+            <p>(100 pcs)</p>
+        </div>
+
+        <!-- Disposable Plastic Apron -->
+        <div class="product-card">
+            <img src="{% static 'img/p apron.webp' %}" alt="Disposable Plastic Apron">
+            <h3>Disposable Plastic Apron</h3>
+            <p>(1 pair)</p>
+        </div>
+
+        <!-- Disposable Shoe Cover -->
+        <div class="product-card">
+            <img src="{% static 'img/s cover.webp' %}" alt="Disposable Shoe Cover">
+            <h3>Disposable Shoe Cover</h3>
+            <p>(1 pair)</p>
+        </div>
+
+        <!-- Disposable Bedsheet Single Layer -->
+        <div class="product-card">
+            <img src="{% static 'img/bedsheet.webp' %}" alt="Disposable Bedsheet Single Layer">
+            <h3>Disposable Bedsheet</h3>
+            <p>(Single Layer, 1 pcs)</p>
+        </div>
+
+        <!-- Disposable Bedsheet Double Layer -->
+        <div class="product-card">
+            <img src="{% static 'img/d bed.webp' %}" alt="Disposable Bedsheet Double Layer">
+            <h3>Disposable Bedsheet</h3>
+            <p>(Double Layer, 1 pcs)</p>
+        </div>
+
+        <!-- Hand Sanitizers -->
+        <div class="product-card">
+            <img src="{% static 'img/s sani.webp' %}" alt="100 ml Hand Sanitizer">
+            <h3>Hand Sanitizer</h3>
+            <p>100 ml, 80% Alcohol</p>
+        </div>
+
+        <div class="product-card">
+            <img src="{% static 'img/snit.webp' %}" alt="500 ml Hand Sanitizer">
+            <h3>Hand Sanitizer</h3>
+            <p>500 ml, 80% Alcohol</p>
+        </div>
+
+        <div class="product-card">
+            <img src="{% static 'img/b sani.webp' %}" alt="5 Ltr Hand Sanitizer">
+            <h3>Hand Sanitizer</h3>
+            <p>5 Ltr, 80% Alcohol</p>
+        </div>
+
+        <!-- Adult Diapers -->
+        <div class="product-card">
+            <img src="{% static 'img/adult.webp' %}" alt="Adult Diapers">
+            <h3>Adult Diapers</h3>
+            <p>M, L, XL size</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<footer>
+    <div class="footer-container">
+
+        <!-- About / Logo -->
+        <div class="footer-section about">
+            <h3>Medical Cotton Co.</h3>
+            <p>Providing high-quality sterile medical cotton for hospitals, clinics, and home first aid. Trusted for safety and quality.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <a href="#">Products</a>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>📞 +91-XXXXXXXXXX</p>
+            <p>✉ info@medicalcotton.com</p>
+            <p>🏢 123 Cotton Street, Mumbai, India</p>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Medical Cotton Co. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

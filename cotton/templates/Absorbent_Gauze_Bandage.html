@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absorbent Gauze Bandage</title>
+    {% load static %}
+
+    
+    <link rel="stylesheet" href="{% static 'css/blood_collection_tubes.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+   <header>
+        
+     <nav class="navbar">
+    <!-- Left: Logo + Brand Name -->
+    <div class="nav-left">
+        <img src="{% static 'img/logo2.png' %}" alt="Tirupati Logo" class="logo">
+        <span class="brand-name">Tirupati Cotton Suppliers</span>
+    </div>
+
+    <!-- Right: Menu Links -->
+    <div class="nav-right">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+
+        <!-- Products Dropdown -->
+        <div class="dropdown">
+            <a href="#">Products</a>
+
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a href="{% url 'Absorbent_Cotton' %}">Absorbent Cotton</a></li>
+                <li><a href="{% url 'Absorbent_Gauze_Bandage' %}">Absorbent Gauze Bandage</a></li>
+                <li><a href="{% url 'Syringe_and_Needles' %}">Syringe and Needles</a></li>
+                <li><a href="{% url 'Hand_Gloves' %}">Hand Gloves</a></li>
+                <li><a href="{% url 'Blood_Collection_Tubes' %}">Blood Collection Tubes</a></li>
+                <li><a href="{% url 'zig_zag_cotton' %}">Zig Zag Cotton</a></li>
+                <li><a href="{% url 'Gauze_Cloth_Than' %}">Gauze Cloth Than</a></li>
+                <li><a href="{% url 'Other_Products' %}">Other Products</a></li>
+            </ul>
+        </div>
+
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+</nav>
+</header>
+<marquee class="highlight-scroll">
+   Bulk Orders & Customized Packaging Available! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   For Enquiry: +91 9876543210
+</marquee>
+        
+
+    <!-- Navbar -->
+    <!-- <nav>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <a href="#">Products</a>
+
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- Product Section -->
+   <!-- Product Section -->
+    <section class="product-section">
+       <section class="product-description">
+  <h2>Cotton Gauze Bandage</h2>
+ 
+</section>
+            <div class="product-wrapper">
+
+                <!-- Left: Product Image -->
+                <div class="product-image">
+                    <img src="{% static 'img/Absorbent Gauze bandage.jpg' %}" alt="Absorbent Gauze Bandage">
+                    
+                    <!-- Range and Button below image -->
+                    <div class="range-container">
+                        <p><strong>Available Range:</strong> 10 gm | 25 gm | 50 gm | 100 gm | 250 gm | 500 gm | 1 kg</p>
+                        <button class="btn" id="openModalBtn">Contact Us for Bulk Orders</button>
+                    </div>
+                </div>
+
+                <!-- Right: Product Details -->
+                <div class="product-details">
+                    <p>
+                        Our Absorbent Gauze Bandages are made from 100% pure cotton, designed for medical and first aid applications.
+                        They are soft, sterile, and hypoallergenic, ensuring safety and comfort for all skin types.
+                        Ideal for wound care, surgical use, and emergency kits. Highly durable and easy to apply.
+                        Provides excellent absorbency and maintains hygiene standards for professional healthcare settings.
+                    </p>
+
+                    <h3>Uses</h3>
+                    <ul>
+                        <li>Wound dressing and protection</li>
+                        <li>Medical and surgical applications</li>
+                        <li>First aid kits and emergency use</li>
+                    </ul>
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li>Highly absorbent and soft</li>
+                        <li>Hypoallergenic and safe for sensitive skin</li>
+                        <li>Sterile and hygienic</li>
+                        <li>Durable and easy to apply</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Popup Modal -->
+<div id="enquireModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    
+    <!-- Enquiry Form -->
+    <form id="enquiryForm">
+      <h2>Enquiry Form</h2>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <input type="mobile no." name="mobile no." placeholder="Your Mobile no." required><br>
+
+      <select name="product" required>
+  <option value="">-- Select Product --</option>
+  <option value="Absorbent Cotton">Absorbent Cotton</option>
+  <option value="Absorbent Gauze Bandage">Absorbent Gauze Bandage</option>
+  <option value="Syringe And Needles">Syringe And Needles</option>
+  <option value="Hand Gloves">Hand Gloves</option>
+  <option value="Blood Collection Tubes">Blood Collection Tubes</option>
+  <option value="Zig Zag Cotton">Zig Zag Cotton</option>
+  <option value="Gauze Cloth Than">Gauze Cloth Than</option>
+</select>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Thank You Message (hidden initially) -->
+    <div id="thankYouMessage" style="display:none; text-align:center;">
+      <h3>Thank You!</h3>
+      <p>Your enquiry has been submitted successfully.</p>
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+
+
+<footer>
+    <div class="footer-container">
+
+        <!-- About / Logo -->
+        <div class="footer-section about">
+            <h3>Medical Cotton Co.</h3>
+            <p>Providing high-quality sterile medical cotton for hospitals, clinics, and home first aid. Trusted for safety and quality.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+               <a href="#">Products</a>
+
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>📞 +91-XXXXXXXXXX</p>
+            <p>✉ info@medicalcotton.com</p>
+            <p>🏢 123 Cotton Street, Mumbai, India</p>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Medical Cotton Co. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+{% comment %} // for popup enquiry form // {% endcomment %}
+<script>
+  const modal = document.getElementById("enquireModal");
+  const openBtn = document.getElementById("openModalBtn");
+  const closeBtn = document.getElementById("closeModal");
+
+  openBtn.onclick = () => modal.style.display = "block";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; }
+
+  // 💡 Form submit event
+  const enquiryForm = document.getElementById("enquiryForm");
+  const thankYouMessage = document.getElementById("thankYouMessage");
+
+  enquiryForm.addEventListener("submit", async function(event) {
+    event.preventDefault(); // stop page reload
+
+    // 👇 Add your Formspree link here
+    const formURL = "https://formspree.io/f/mpwovgde"; // <-- replace with your own link
+
+    // Send form data to Formspree
+    const response = await fetch(formURL, {
+      method: "POST",
+      body: new FormData(enquiryForm),
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      // hide form, show thank you message
+      enquiryForm.style.display = "none";
+      thankYouMessage.style.display = "block";
+
+      // auto close popup after few seconds
+      setTimeout(() => {
+        modal.style.display = "none";
+        enquiryForm.reset();
+        enquiryForm.style.display = "block";
+        thankYouMessage.style.display = "none";
+      }, 3000);
+    } else {
+      alert("⚠️ Error sending your message. Please try again.");
+    }
+  });
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #138a9c;
+    border-bottom: 2px solid#138a9c;
+    font-family: Arial, sans-serif;
+}
+
+/* Left: Logo + Brand Name */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #505254;
+}
+
+.nav-left .brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Right: Menu Links */
+.nav-right a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    font-weight: bold; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hover effect */
+.nav-right a:hover {
+    color: #292927;         /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* optional subtle bg */
+}
+
+/* Active/Clicked effect */
+.nav-right a:active {
+    color: #5f5d56;         /* Change color when link is clicked */
+    background-color: rgba(255, 255, 255, 0.2); /* subtle bg */
+}
+
+
+/* Make dropdown inline with other links */
+.dropdown {
+    position: relative;
+    display: inline-block;  /* important: align horizontally */
+}
+
+/* Dropdown button (Products link) */
+.dropbtn {
+    text-decoration: none;
+    color: #138a9c;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 20px;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.dropbtn:hover {
+    color: #53534f;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;               
+    position: absolute;
+    top: 100%;                   
+    left: 0;
+    background-color: #09ccea;   /* Dropdown background */
+    list-style: none; 
+    padding: 0;                /* no extra padding */
+    margin: 0;                /* Reduce vertical padding */
+    border-radius: 5px;
+    width: auto;            /* width auto -> content ke according */
+    min-width: 120px;           /* Smaller width */
+    z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Remove spacing from <li> */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Dropdown links styling */
+.dropdown-menu li a {
+    display: block;
+    white-space: nowrap; 
+    padding: 2px 8px;
+    line-height: 1;  
+    font-size: 15px;
+    color: rgb(14, 192, 223);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: block;         /* ensures each link is on its own line */
+    margin: 0; 
+    background-color: transparent; /* <-- make sure link background is transparent */
+  
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+/* --------------------------
+    Footer
+---------------------------*/
+footer {
+    background-color: #141617;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+    color: #fff;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a:hover {
+    color: #ffdd57;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+}
+
+.footer-section.social a {
+    color: white;             /* icon color */
+    font-size: 20px;          /* icon size */
+    margin-right: 15px;       /* spacing between icons */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #ffdd57;           /* hover color */
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}

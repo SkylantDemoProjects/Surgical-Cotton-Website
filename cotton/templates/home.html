@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Cotton products</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
+
+</head>
+<body>
+  
+
+  <header>
+
+
+     <nav class="navbar">
+    <!-- Left: Logo + Brand Name -->
+    <div class="nav-left">
+        <img src="{% static 'img/logo2.png' %}" alt="Tirupati Logo" class="logo">
+        <span class="brand-name">Tirupati Cotton Suppliers</span>
+    </div>
+
+    <!-- Right: Menu Links -->
+    <div class="nav-right">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item" href="{% url 'Absorbent_Cotton' %}">Absorbent Cotton</a></li>
+    <li><a class="dropdown-item" href="{% url 'Absorbent_Gauze_Bandage' %}">Absorbent Gauze Bandage</a></li>
+    <li><a class="dropdown-item" href="{% url 'Syringe_and_Needles' %}">Syringe & Needles</a></li>
+    <li><a class="dropdown-item" href="{% url 'Hand_Gloves' %}">Hand Gloves</a></li>
+    <li><a class="dropdown-item" href="{% url 'Blood_Collection_Tubes' %}">Blood Collection Tubes</a></li>
+    <li><a class="dropdown-item" href="{% url 'zig_zag_cotton' %}">Zig Zag Cotton</a></li>
+    <li><a class="dropdown-item" href="{% url 'Gauze_Cloth_Than' %}">Gauze Cloth Than</a></li>
+    <li><a class="dropdown-item" href="{% url 'Other_Products' %}">Other Products</a></li>
+  </ul>
+</li>
+
+        
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+</nav>
+</header>
+        
+
+<section class="hero-slider">
+  <div class="slideshow">
+
+    <!-- Slide 1: Left Center -->
+<div class="slide active" style="background-image: url('{% static "img/image1.jpeg" %}');">
+  <div class="overlay overlay-light">
+    <div class="slide-content left animate-left">
+      <h2 class="slide1-heading">
+        Pure Cotton, <br>
+        <span>Pure Comfort</span>
+      </h2>
+
+      <p class="slide1-subtext">
+        Soft on your skin, kind to nature.
+      </p>
+
+     <a href="#services-section" class="slide1-btn">Explore Collection</a>
+
+
+    </div>
+
+  <div class="trust-icons">
+    <div><i class="fa-solid fa-hands-holding-medical"></i> Dermatologist Tested</div>
+    <div><i class="fa-solid fa-leaf"></i> 100% Organic Cotton</div>
+    <div><i class="fa-solid fa-recycle"></i> Eco-friendly & Biodegradable</div>
+    <div><i class="fa-solid fa-hospital"></i> Used in 500+ Hospitals</div>
+</div>
+<p class="medical-tagline">Clean. Safe. Certified.💧</p>
+
+
+  </div>
+</div>
+
+
+   <!-- Slide 2: Right Bottom -->
+<div class="slide" style="background-image: url('{% static "img/image2.jpg" %}');">
+  <div class="overlay overlay-green">
+    <div class="slide-content bottom-right animate-right">
+      <h2 class="quote dual-font">
+        <span class="half1">Trusted Care,</span>
+        <span class="half2">Woven in Purity 🌿</span>
+      </h2>
+      <p class="subtext smooth-subtext">
+        Medical-grade cotton — soft, sterile, and safe for every touch. ♻️
+      </p>
+    </div>
+  </div>
+</div>
+
+
+{% comment %} <!-- Slide 3: Center Bottom -->
+<div class="slide" style="background-image: url('{% static "img/image3.jpeg" %}');">
+  <div class="overlay overlay-blue">
+    <div class="slide-content bottom animate-bottom">
+      <h2 class="quote purity-quote">
+        <span class="half1">Purity Rolled</span>
+        <span class="half2">to Perfection</span>
+      </h2>
+      <p class="subtext purity-subtext">
+        Each layer crafted for care — soft, sterile, and skin-friendly. 🌿🤍
+      </p>
+      <a href="#" class="btn">View Products</a>
+    </div>
+  </div>
+</div>
+ {% endcomment %}
+
+
+
+    {% comment %} <!-- Slide 4: Top Left -->
+<div class="slide" style="background-image: url('{% static "img/image4.jpeg" %}');">
+  <div class="overlay overlay-pastel">
+    <div class="slide-content top-left">
+      <h2 class="quote-text">
+        <span class="woven">Woven with</span><br>
+        <span class="love-care">Love & Care💙</span>
+      </h2>
+      <p class="subtext">Blending timeless craft with modern style.</p>
+    </div>
+  </div>
+</div> {% endcomment %}
+
+
+<!-- Slide: Soft Protection, Trusted Healing 5-->
+<div class="slide" style="background-image: url('{% static "img/image2.jpg" %}');">
+  <div class="overlay overlay-green">
+    <div class="slide-content center animate-fade">
+      <h2 class="quote dual-font">
+        <span class="half1">SOFT PROTECTION,</span>
+        <span class="half2">TRUSTED HEALING</span> 
+      </h2>
+      <p class="subtext new-subtext">
+        Premium medical cotton — gentle on skin, strong in care 🌿
+      </p>
+    </div>
+  </div>
+</div>
+
+    {% comment %} <!-- Slide 6: Left Bottom -->
+<div class="slide" style="background-image: url('{% static "img/image6.jpeg" %}');">
+  <div class="overlay overlay-soft">
+    <div class="slide-content bottom-left animate-left">
+      <h2 class="quote-text font6">
+        <span class="word1">Gentle on Skin,</span>
+        <span class="word2">Tough on Toxins 🤍</span>
+      </h2>
+      <p class="subtext">Hypoallergenic and chemical-free cotton products. 💧</p>
+    </div>
+  </div>
+</div> {% endcomment %}
+
+ 
+<!-- Slide: Science Meets Softness -->
+<div class="slide" style="background-image: url('{% static "img/image6.jpeg" %}');">
+  <div class="overlay overlay-soft">
+    <div class="slide-content center animate-fade">
+      <h2 class="quote-science">
+        <span class="main-word">Where Science</span> <br>
+        <span class="sub-word">Meets Softness</span>
+      </h2>
+      <p class="science-subtext">
+        Precision-made medical cotton — gentle on skin, strong in protection.
+      </p>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div> 
+  </div>
+</div> 
+</section>
+
+
+{% comment %} 
+
+<section class="slider-section">
+<div class="slide" style="background-image: url('{% static "img/image6.jpeg" %}');">
+<div class="overlay">
+
+
+<div class="quote-box top-left">
+<h3>Pure Protection</h3>
+<p>Soft touch, medical-grade strength.</p>
+</div>
+
+
+<div class="quote-box top-right">
+<h3>Science Meets Softness</h3>
+<p>Advanced cotton for modern care.</p>
+</div>
+
+
+<div class="quote-box bottom-left">
+<h3>Trusted by Experts</h3>
+<p>Every fiber crafted with precision.</p>
+</div>
+
+
+<div class="quote-box bottom-right">
+<h3>Comfort You Can Feel</h3>
+<p>Softness that truly heals.</p>
+</div>
+ {% endcomment %}
+
+</div>
+</div>
+</section>
+
+
+     <!-- <section id="Home" class="hero">
+  <div class="hero-content">
+    <h2>Pure Cotton, Pure Comfort</h2>
+    <p>Discover the benefits, uses and products made from natural cotton.</p>
+  </div>
+</section> -->
+
+
+
+
+
+
+
+<section class="why-choose-us">
+    <div class="container-wcu">
+        <h2 class="wcu-title">Why Choose Us</h2>
+        <div class="underline-wcu"></div>
+
+        <div class="wcu-grid">
+            <div class="wcu-box">
+                <img src="{% static 'img/cotton_growth.png' %}" alt="Quality Icon">
+                <h3>Organic Cotton Growth</h3>
+                <p>We cultivate 100% organic cotton using eco-friendly farming for a sustainable future.</p>
+            </div>
+
+            <div class="wcu-box">
+                <img src="{% static 'img/fast_delivery.gif' %}" alt="Certified Safe">
+                <h3>Fast Delivery</h3>
+                <p>On-time, safe, and reliable delivery of cotton products across India and abroad.</p>
+            </div>
+
+            <div class="wcu-box">
+                <img src="{% static 'img/eco_friendly.png' %}" alt="Eco Friendly">
+                <h3>Eco-Friendly</h3>
+                <p>Made from environmentally responsible materials, gentle on both your skin and nature.</p>
+            </div>
+
+            <div class="wcu-box">
+                <img src="{% static 'img/trusted.png' %}" alt="Support">
+                <h3>Trusted Support</h3>
+                <p>We provide reliable customer service, fast delivery, and consistent professional support.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="services-section" class="services-section">
+  <h2>Our Cotton Products</h2>
+  <div class="services-container">
+
+    <div class="service-card">
+      <img src="{% static 'img/Absorbent Gauze Bandage.jpg' %}" alt="Cotton Pads">
+      <h3>Absorbent Cotton (I.P.)</h3>
+      <p>Absorbent cotton (I.P.) is sterilized soft and purified cotton prepared according to Indian Pharmacopoeia (I.P.) standards.</p>
+      <a href="{% url 'Absorbent_Cotton' %}" class="service-btn">Read More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'img/absorbent_cotton_roll.jpg' %}" alt="Cotton Rolls">
+      <h3>Absorbent Gauze Bandage/Cloth</h3>
+      <p>Sterile soft and highly absorbent gauze bandage/cloth for wound dressing and medical use.</p>
+      <a href="{% url 'Absorbent_Gauze_Bandage' %}" class="service-btn">Read More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'img/Syringe_and_Needles.jpg' %}" alt="Cotton Balls">
+      <h3>Syringe and Needles</h3>
+      <p>Syringe and Needles are sterile, single-use medical devices used for accurate injection and safe fluid withdrawal in healthcare procedures.</p>
+      <a href="{% url 'Syringe_and_Needles' %}" class="service-btn">Read More</a>
+    </div>
+
+    <div class="service-card">
+      <img src="{% static 'img/Hand_Gloves.jpg' %}" alt="Cotton Swabs">
+      <h3>Hand Gloves (all size)</h3>
+      <p>Durable hygienic and comfortable gloves suitable for medical, laboratory and general-purpose use.</p>
+      <a href="{% url 'Hand_Gloves' %}" class="service-btn">Read More</a>
+    </div>
+
+      <div class="service-card">
+      <img src="{% static 'img\tubes.webp' %}" alt="tubes">
+      <h3>Blood Collection Tube</h3>
+      <p>A sterile tube used to safely collect store and transport blood samples for laboratory testing.</p>
+      <a href="{% url 'Blood_Collection_Tubes' %}" class="service-btn">Read More</a>
+    </div>
+
+     <div class="service-card">
+      <img src="{% static 'img/zig zag cotton.webp' %}" alt="Cotton Swabs">
+      <h3>Zig-Zag Cotton</h3>
+      <p>Zig-Zag Cotton is a soft absorbent cotton folded in a zig-zag pattern for easy use in medical and cosmetic applications.</p>
+      <a href="{% url 'zig_zag_cotton' %}" class="service-btn">Read More</a>
+    </div>
+
+      <div class="service-card">
+      <img src="{% static 'img/gauze.webp' %}" alt="Cotton Swabs">
+      <h3>Gauze Cloth Than</h3>
+      <p>Gauze Cloth Than is a lightweight, loosely woven cotton fabric used for wound dressing, cleaning, and medical applications.</p>
+      <a href="{% url 'Gauze_Cloth_Than' %}" class="service-btn">Read More</a>
+    </div>
+
+     <div class="service-card">
+      <img src="{% static 'img/other.webp' %}" alt="Cotton Swabs">
+      <h3>Other Products</h3>
+      <p>Wide range of high-quality disposable and hygiene essentials designed for medical, surgical.</p>
+      <a href="{% url 'Other_Products' %}" class="service-btn">Read More</a>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+{% comment %} 
+<div id="offerPopup" class="popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <h3>🎉 Festive Offer!</h3>
+    <p>Get <strong>20% off</strong> on all cotton care products.</p>
+    <a href="#shop" class="popup-btn">Claim Offer</a>
+  </div>
+</div>
+
+<script>
+window.onload = function() {
+  setTimeout(() => {
+    document.getElementById("offerPopup").style.display = "flex";
+  }, 2000);
+};
+</script>
+
+
+
+
+<script>
+document.querySelector(".close").onclick = function() {
+  document.getElementById("offerPopup").style.display = "none";
+};
+
+window.onclick = function(event) {
+  const popup = document.getElementById("offerPopup");
+  if (event.target === popup) {
+    popup.style.display = "none";
+  }
+};
+</script>
+
+ {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<section class="circle-services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="circle-service-container">
+
+    <div class="circle-card">
+      <div class="circle-icon"><i class="fa-solid fa-certificate"></i></div>
+      <h3>Quality Assurance</h3>
+      <p>Rigorous quality checks at every stage ensure only premium cotton reaches our customers.</p>
+    </div>
+
+    <div class="circle-card">
+      <div class="circle-icon"><i class="fa-solid fa-industry"></i></div>
+      <h3>Pure Cotton Processing</h3>
+      <p>Our cotton is refined in sterile environments for supreme softness and purity.</p>
+    </div>
+
+    <div class="circle-card">
+      <div class="circle-icon"><i class="fa-solid fa-box-open"></i></div>
+      <h3>Medical Packaging Solutions</h3>
+      <p>Sterile and secure packaging for medical cotton products to maintain purity.</p>
+    </div>
+
+    <div class="circle-card">
+      <div class="circle-icon"><i class="fa-solid fa-recycle"></i></div>
+      <h3>Eco Packaging</h3>
+      <p>All packaging is biodegradable and eco-conscious to protect our planet.</p>
+    </div>
+
+    <div class="circle-card">
+      <div class="circle-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3>Hygienic Cotton Supplies</h3>
+      <p>Antibacterial and hygienic cotton products for hospitals, clinics, and home use.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<footer>
+    <div class="footer-container">
+
+        <!-- About / Logo -->
+        <div class="footer-section about">
+            <h3>Medical Cotton Co.</h3>
+            <p>Providing high-quality sterile medical cotton for hospitals, clinics, and home first aid. Trusted for safety and quality.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <a href="#">Products</a>
+
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>📞 +91-XXXXXXXXXX</p>
+            <p>✉ info@medicalcotton.com</p>
+            <p>🏢 123 Cotton Street, Mumbai, India</p>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Medical Cotton Co. All Rights Reserved.</p>
+    </div>
+  </section>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.slideshow .slide');
+    let current = 0;
+
+    function nextSlide() {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length; // loop back to first slide
+        slides[current].classList.add('active');
+    }
+
+    setInterval(nextSlide, 2000); // change slide every 2 seconds
+});
+</script>
+
+<!-- Bootstrap JS (must be before </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".slide");
+  const quote = document.getElementById("quoteText");
+
+  const quotes = [
+    { text: "Pure Cotton, Pure Comfort", font: "font1", pos: { top: "60%", left: "10%" } },
+    { text: "Wrap Yourself in Nature’s Softness", font: "font2", pos: { top: "20%", left: "60%" } },
+    { text: "Breathe Easy with 100% Organic Cotton", font: "font3", pos: { top: "70%", left: "40%" } },
+    { text: "Luxury That Feels Naturally Yours", font: "font4", pos: { top: "50%", left: "50%" } },
+    { text: "Stay Cool. Stay Cotton Fresh", font: "font5", pos: { top: "30%", left: "20%" } },
+    { text: "Soft. Sustainable. Stylish.", font: "font6", pos: { top: "10%", left: "55%" } },
+    { text: "From Field to Fashion", font: "font7", pos: { top: "65%", left: "70%" } },
+    { text: "Elegance Woven with Love", font: "font8", pos: { top: "40%", left: "15%" } },
+    { text: "Because Cotton is Forever", font: "font9", pos: { top: "25%", left: "45%" } }
+  ];
+
+  let current = 0;
+
+  function changeSlide() {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+
+    quote.style.opacity = 0;
+    setTimeout(() => {
+      quote.innerHTML = quotes[current].text;
+      quote.className = ""; // reset previous font
+      quote.classList.add(quotes[current].font);
+      quote.style.top = quotes[current].pos.top;
+      quote.style.left = quotes[current].pos.left;
+      quote.style.opacity = 1;
+    }, 800);
+  }
+
+  setInterval(changeSlide, 4000);
+});
+</script>
+ {% endcomment %}
+
+
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function nextSlide() {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}
+
+setInterval(nextSlide, 6000); // 6 seconds per slide
+</script>
+
+
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) slide.classList.add("active");
+  });
+}
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}, 6000);
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+

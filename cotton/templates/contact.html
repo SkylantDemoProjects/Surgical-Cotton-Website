@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+   {% load static %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+
+  
+     <header>
+       
+     <nav class="navbar">
+    <!-- Left: Logo + Brand Name -->
+    <div class="nav-left">
+        <img src="{% static 'img/logo2.png' %}" alt="Tirupati Logo" class="logo">
+        <span class="brand-name">Tirupati Cotton Suppliers</span>
+    </div>
+
+    <!-- Right: Menu Links -->
+    <div class="nav-right">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+
+        <!-- Products Dropdown -->
+        <div class="dropdown">
+            <a href="#">Products</a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                <li><a href="{% url 'Absorbent_Cotton' %}">Absorbent Cotton</a></li>
+                <li><a href="{% url 'Absorbent_Gauze_Bandage' %}">Absorbent Gauze Bandage</a></li>
+                <li><a href="{% url 'Syringe_and_Needles' %}">Syringe and Needles</a></li>
+                <li><a href="{% url 'Hand_Gloves' %}">Hand Gloves</a></li>
+                <li><a href="{% url 'Blood_Collection_Tubes' %}">Blood Collection Tubes</a></li>
+                <li><a href="{% url 'zig_zag_cotton' %}">Zig Zag Cotton</a></li>
+                <li><a href="{% url 'Gauze_Cloth_Than' %}">Gauze Cloth Than</a></li>
+                <li><a href="{% url 'Other_Products' %}">Other Products</a></li>
+            </ul>
+        </div>
+
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+</nav>
+</header>
+        
+    <!-- Products Dropdown -->
+
+
+    <!-- Navbar -->
+    <!-- <header>
+        <div class="navbar">
+            <h1 class="logo">CottonWorld</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
+    
+  
+    
+<!-- Login Popup Modal -->
+<div class="login-popup" id="loginModal">
+  <div class="login-content">
+    <span class="close" onclick="closeLogin()">&times;</span>
+    <h2>Login to GoRo Cars</h2>
+    <form action="https://formspree.io/f/xpwjqbkl" method="POST">
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Password</label>
+      <input type="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <p>Don’t have an account? <a href="#">Register</a></p>
+  </div>
+</div>
+
+
+
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Company Name:</strong> Nagpur Branch: 302, Gajanan Apartment, Kharbi Square,
+Nagpur, MH 440009</p>
+      <p>Head Office: Imalia Bohta Chowk, Bharat Nagar, Chand
+Road, Chhindwara (M.P.) 480001</p>
+      <p><strong>Call Us:</strong> <a href="tel:+919764442140">+91 9764442140 | +91-6265980822</a></p>
+      <p><strong>Email:</strong> <a href="mailto:support@selfspin.com">support@selfspin.com</a></p>
+      <img src="https://cdn-icons-png.flaticon.com/512/5977/5977561.png" alt="Support Icon" class="support-img">
+    </div>
+
+    <div class="contact-form">
+  <h2>You can find us here</h2>
+  <p>Find help for your queries here:</p>
+  <form action="https://formspree.io/f/mwpnpdvq" method="POST" accept-charset="UTF-8">
+
+    <input type="text" name="name" placeholder="Enter your name*" required>
+    <input type="email" name="_replyto" placeholder="Enter your email address*" required>
+    <input type="tel" name="phone" placeholder="Enter your mobile number*" required>
+    <textarea name="message" placeholder="Enter your comment"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+  </div>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8840723612244!2d77.5993588148223!3d12.901153990896708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15e3a1f8b1a1%3A0x71b949b7c8318f99!2sVakil%20Square!5e0!3m2!1sen!2sin!4v1623347197741!5m2!1sen!2sin"
+      width="100%" height="300" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+     
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/7498535661" class="whatsapp-chat" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="Chat on WhatsApp" />
+    <span class="whatsapp-text"></span>
+  </a>
+
+
+
+
+<footer>
+    <div class="footer-container">
+
+        <!-- About / Logo -->
+        <div class="footer-section about">
+            <h3>Medical Cotton Co.</h3>
+            <p>Providing high-quality sterile medical cotton for hospitals, clinics, and home first aid. Trusted for safety and quality.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <a href="#">Products</a>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>📞 +91-XXXXXXXXXX</p>
+            <p>✉ info@medicalcotton.com</p>
+            <p>🏢 123 Cotton Street, Mumbai, India</p>
+        </div>
+
+
+        <!-- Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Medical Cotton Co. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//for login button
+ <script>
+    function openLogin() {
+      document.getElementById("loginModal").style.display = "block";
+    }
+    function closeLogin() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("loginModal")) {
+        closeLogin();
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // Auto thank you message
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("thankYouMessage").style.display = "block";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
