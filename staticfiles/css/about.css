@@ -1,0 +1,786 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #138a9c;
+    border-bottom: 2px solid#138a9c;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    height: 90;
+}
+
+/* Left: Logo + Brand Name */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-left .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #505254;
+}
+
+.nav-left .brand-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Right: Menu Links */
+.nav-right a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    font-weight: bold; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hover effect */
+.nav-right a:hover {
+    color: #292927;         /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* optional subtle bg */
+}
+
+/* Active/Clicked effect */
+.nav-right a:active {
+    color: #5f5d56;         /* Change color when link is clicked */
+    background-color: rgba(255, 255, 255, 0.2); /* subtle bg */
+}
+
+
+/* Make dropdown inline with other links */
+.dropdown {
+    position: relative;
+    display: inline-block;  /* important: align horizontally */
+}
+
+/* Dropdown button (Products link) */
+.dropbtn {
+    text-decoration: none;
+    color: #138a9c;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 20px;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.dropbtn:hover {
+    color: #53534f;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;               
+    position: absolute;
+    top: 100%;                   
+    left: 0;
+    background-color:#138a9c;   /* Dropdown background */
+    list-style: none; 
+    padding: 0;                /* no extra padding */
+    margin: 0;                /* Reduce vertical padding */
+    border-radius: 5px;
+    width: auto;            /* width auto -> content ke according */
+    min-width: 120px;           /* Smaller width */
+    z-index: 1000;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Remove spacing from <li> */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Dropdown links styling */
+.dropdown-menu li a {
+    display: block;
+    white-space: nowrap; 
+    padding: 2px 8px;
+    line-height: 1;  
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: block;         /* ensures each link is on its own line */
+    margin: 0; 
+    background-color: transparent; /* <-- make sure link background is transparent */
+  
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+/* ====== Mobile Menu ====== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: #1f2937;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  nav .nav-links {
+    position: absolute;
+    right: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+  }
+
+  nav .nav-links.active {
+    right: 0;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+/* ====== Content Section ====== */
+
+
+.content {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #e0f2fe; /* light blue */
+}
+
+.content {
+    background-image: url("/static/img/bg1.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+
+    height: 200px;   /* 🔥 Yaha height badha sakte ho */
+}
+
+
+.content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a8797;
+  margin-bottom: 5px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-top: 4px;
+}
+
+/* ====== About Section ====== */
+.container h1, .container p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quality-section {
+  background-color: #f3f4f6;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.quality-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #138a9c;
+}
+
+.quality-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quality-list li {
+  font-size: 1.1rem;
+  padding: 8px 0;
+  border-bottom: 1px solid #d1d5db;
+}
+
+/* ====== About Tirupati Cotton ====== */
+.about-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Heading */
+.about-section .about-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #138a9c;
+  margin-bottom: 30px;
+}
+
+/* NOTE: yahan 800px galat tha — itna bada font nahi hota */
+.about-section .about-heading h1 {
+  font-size: 3rem; /* 👈 fix: realistic heading size */
+  font-weight: bold;
+  color: #138a9c;
+  text-align: center;
+}
+
+
+/* Paragraph */
+.about-section .about-content p {
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.7;
+  color: #1f2937;
+  margin-bottom: 40px; /* 👈 keep decent spacing */
+}
+
+/* Highlight Box */
+.about-section .highlight {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #dbeafe;
+  padding: 15px 20px;
+  border-left: 5px solid #138a9c;
+  font-weight: 500;
+}
+
+/* 👇 Add this new rule */
+.grid {
+  margin-top: 50px; /* 👈 this creates space between paragraph & cards */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ====== Cards in About Section ====== */
+.grid .p-4 {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid .p-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(7, 234, 246, 0.15);
+}
+.about-section {
+    padding-left: 80px;   /* Left space */
+    padding-right: 80px;  /* Right space */
+}
+
+.about-container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;             /* cards ke bich ki space */
+}
+
+.about-card {
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 20px 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover */
+.about-card:hover {
+  border-color: #00bcd4;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 188, 212, 0.4);
+}
+
+/* Active */
+.about-card.active {
+  border-color: #138a9c;
+  background-color: #e0f7fa;
+  transform: scale(1.03);
+}
+
+
+/* Product Quality Section */
+.product-quality-section {
+  background: linear-gradient(135deg, #e0f7fa, #d1c4e9); /* subtle gradient */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-quality-section:hover {
+  transform: translateY(-5px);
+}
+
+.product-quality-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #138a9c; /* deep purple */
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.product-quality-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #00acc1; /* blue underline */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.quality-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.quality-list li {
+  /* Gradient background */
+  background: linear-gradient(135deg, #0488c1, #7cb9d3); 
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #ffffff; /* white text looks better on gradient */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 180px;
+}
+
+.quality-list li:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+
+.mvvs-section {
+  display: flex;
+  justify-content: center; /* center all cards horizontally */
+  gap: 50px;               /* space between each card */
+  flex-wrap: wrap;          /* wrap on smaller screens */
+  margin: 50px 0;
+}
+
+.card {
+  text-align: center;       /* center icon and text */
+  max-width: 250px;         /* optional card width */
+}
+
+.card .icon {
+  width: 80px;              /* size of the icon */
+  height: 80px;
+  margin-bottom: 15px;      /* spacing between icon and heading */
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #004080;           /* attractive color */
+}
+
+.card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+/*about*/
+
+
+.about-section {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+}
+
+.about-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.about-image {
+  position: relative;              /* for overlapping images */
+  width: 450px;                    /* size of the image area */
+  height: 450px;
+  flex-shrink: 0; 
+  overflow: visible; 
+  margin-left: 40px;                 /* prevent shrinking on small screens */
+}
+
+.about-image img {
+  position: absolute;              /* enables overlap */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;             /* square with soft corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border: none;                    /* remove circular border */
+  transition: transform 0.3s ease;
+}
+
+/* Front image */
+.about-image .img1 {
+  width: 80%;
+  height: 80%;
+  top: -40px;
+  left: -40px;
+  z-index: 2;
+}
+/* Back image (shifted for overlap effect) */
+.about-image .img2 {
+  width: 90%;       /* smaller so it’s visible behind */
+  height: 90%;
+  top: 20px;        /* move down */
+  left: -5px;       /* move right */
+  z-index: 1;
+  opacity: 0.95;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-image {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .about-image {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  .about-image .img2 {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.about-content {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  min-width: 300px;
+}
+
+.about-content strong {
+  color: #004aad;
+}
+
+.highlight {
+  margin-top: 20px;
+  background: #e6f0ff;
+  padding: 15px;
+  border-left: 5px solid #007bff;
+  border-radius: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+  .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+
+
+
+/* --------------------------
+    Footer
+---------------------------*/
+footer {
+    background-color: #141617;
+    color: #fff;
+    padding: 50px 20px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+    color: #fff;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a:hover {
+    color: #ffdd57;
+    transition: 0.3s;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 15px;
+}
+
+.footer-section.social a {
+    color: white;             /* icon color */
+    font-size: 20px;          /* icon size */
+    margin-right: 15px;       /* spacing between icons */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section.social a:hover {
+    color: #ffdd57;           /* hover color */
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== About Tirupati Cotton ====== */
+.about-section {
+  padding: 50px 20px;
+background-color: #f3f4f6;
+}
+
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Heading */
+.about-section .about-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #138a9c;
+  margin-bottom: 30px;
+}
+
+/* NOTE: yahan 800px galat tha — itna bada font nahi hota */
+.about-section .about-heading h1 {
+  font-size: 3rem; /* 👈 fix: realistic heading size */
+  font-weight: bold;
+  color: #138a9c;
+  text-align: center;
+}
+
+/* ====== New Container Box ====== */
+.about-box {
+  max-width: 900px;
+  margin: auto;
+ background-color: #e0f2fe; /* light bluish background matching heading color */
+  padding: 30px;
+  border-radius: 12px;
+
+  border: 2px solid #138a9c; /* border same as heading color */
+  box-shadow: 0 4px 20px rgba(19, 138, 156, 0.25); /* soft shadow */
+}
+
+
+/* Make paragraph spacing and readability better */
+.about-text {
+  line-height: 1.75;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+
+
+
+/* Paragraph */
+.about-section .about-content p {
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.7;
+  color: #1f2937;
+  margin-bottom: 40px; /* 👈 keep decent spacing */
+}
+
+/* Highlight Box */
+.about-section .highlight {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #e0f2fe;
+  padding: 15px 20px;
+  border-left: 5px solid #138a9c;
+  font-weight: 500;
+}
+
+/* 👇 Add this new rule */
+.grid {
+  margin-top: 50px; /* 👈 this creates space between paragraph & cards */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ====== Cards in About Section ====== */
+.grid .p-4 {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid .p-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(7, 234, 246, 0.15);
+}
+
+.about-card {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+
+/* Hover effect */
+.about-card:hover {
+  border-color: #00bcd4;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 188, 212, 0.4);
+}
+
+/* Active / Click highlight */
+.about-card.active {
+  border-color: #138a9c;
+  background-color: #e0f7fa;
+  box-shadow: 0 8px 20px rgba(8, 203, 233, 0.4);
+  transform: scale(1.03);
+}
